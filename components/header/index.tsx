@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { ListTabs } from "@/constants/header/list-tabs";
 import { FaSearch } from "react-icons/fa";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import Link from "next/link";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -34,7 +36,9 @@ const Header = () => {
     >
       <div className="w-full px-6 py-4 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black">
         <div className="flex flex-row items-center">
-          <div className="sm:text-3xl text-xl font-bold">MangaHub</div>
+          <Link href={"/"} className="sm:text-3xl text-xl font-bold">
+            MangaHub
+          </Link>
         </div>
         <div className="w-[400px] px-4 py-2 border rounded-md flex flex-row items-center max-md:hidden">
           <input
@@ -50,6 +54,9 @@ const Header = () => {
               {tab.title}
             </div>
           ))}
+        </div>
+        <div className="sm:hidden ">
+          <HiOutlineMenuAlt3 size={20} />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="w-full p-4">
       <div className="w-full px-4 py-2 rounded-lg shadow-lg backdrop-blur border">
         <div className="flex flex-row items-center justify-between">
-          <div className="text-2xl font-bold text-center border p-3 shadow-2xl italic">
+          <div className="text-2xl font-bold text-center p-3 italic">
             MangaHub
           </div>
           <div className="flex flex-row justify-center items-center gap-4">
