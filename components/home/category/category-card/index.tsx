@@ -22,7 +22,7 @@ const CategoryCard = ({ title, image }: CategoryCardProps) => {
           Jujutsu Kaisen is the story of Yuji Itadori, an easygoing high school
           student who joins the occult club at school. When they accidentally
           summon grotesque creatures by messing with a cursed object, Itadori
-          fights to save his friends' lives.
+          fights to save his friends&apos; lives.
         </p>
       </div>
       <div className="flex flex-row justify-end gap-1">

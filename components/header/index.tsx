@@ -67,7 +67,9 @@ const Header = () => {
         </div>
 
         {openMenu && (
-          <div className="absolute top-[80px] left-0 w-full bg-white bg-opacity-90 flex flex-col items-center justify-center px-2 py-3">
+          <div
+            className={`absolute top-[70px] py-3 left-0 w-full h-screen bg-white bg-opacity-90 flex flex-col items-center justify-start px-2 gap-3`}
+          >
             <div className="w-full px-2 py-1 border rounded-md flex flex-row items-center shadow text-black">
               <input
                 type="text"
