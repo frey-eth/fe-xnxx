@@ -101,10 +101,10 @@ const PageComic = () => {
             muốn dành thời gian của mình trong Câu lạc bộ Tâm Linh. Một ngày sau
             cái chết của ông mình, anh gặp Megumi Fushiguro, người đang tìm kiếm
             vật thể bị nguyền rủa mà các thành viên CLB đã tìm thấy. Đối mặt với
-            những con quái vật khủng khiếp bị "Ám", Yuuji nuốt vật thể bị phong
-            ấn để có được sức mạnh của nó và cứu bạn bè của mình! Nhưng giờ
-            Yuuji là người bị "Ám", và cậu ấy sẽ bị kéo vào thế giới ma quỷ ly
-            kỳ của Megumi và những con quái vật độc ác.
+            những con quái vật khủng khiếp bị Ám, Yuuji nuốt vật thể bị phong ấn
+            để có được sức mạnh của nó và cứu bạn bè của mình! Nhưng giờ Yuuji
+            là người bị Ám, và cậu ấy sẽ bị kéo vào thế giới ma quỷ ly kỳ của
+            Megumi và những con quái vật độc ác.
           </p>
         </div>
         <div className=" flex flex-col gap-4 w-full">
