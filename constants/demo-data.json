@@ -1,0 +1,283 @@
+{
+  "data": {
+    "id": 11411,
+    "order": 42,
+    "number": "39",
+    "name": "Kỳ Hội Giao Lưu Với Trường Kết Nghĩa Kyoto - Đấu Đội - (6)",
+    "views_count": 8924,
+    "comments_count": 6,
+    "status": "processed",
+    "previous_chapter_id": 6136,
+    "previous_chapter_number": "38",
+    "previous_chapter_name": "Kỳ Hội Giao Lưu Với Trường Kết Nghĩa Kyoto - Đấu Đội - (5)",
+    "next_chapter_id": null,
+    "next_chapter_number": null,
+    "next_chapter_name": null,
+    "created_at": "2022-11-22T20:11:27.589+07:00",
+    "updated_at": "2024-06-18T10:00:09.138+07:00",
+    "manga": {
+      "id": 197,
+      "name": "Jujutsu Kaisen (FULL HD)",
+      "description": "Vẫn là thầy cúng đại chiến những hình ảnh sắc nét hơn, dịch thuật chuẩn chỉnh hơn.",
+      "cover_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/manga/197/cover/797a5aa7eaf5131bff839c716c712a39.jpg",
+      "panorama_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/manga/197/panorama/38caae69f01d9ec97baf7a74b5c2c9b4.jpg",
+      "marginless": false,
+      "is_region_limited": false,
+      "direction": "rtl",
+      "is_nsfw": false
+    },
+    "team": {
+      "id": 1,
+      "name": "Shyobz",
+      "description": "Nhóm dịch đi tiên phong trong phong trào cứu truyện.",
+      "facebook_address": "shyobzz",
+      "is_ads": true,
+      "translations_count": 92,
+      "mangas_count": 92
+    },
+    "pages": [
+      {
+        "id": 302533,
+        "order": 0,
+        "width": 1500,
+        "height": 1156,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302533/image/scrambled-469d2b77d0b86acc4756f90afe16ed9d.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302533/image/scrambled-469d2b77d0b86acc4756f90afe16ed9d.jpg",
+        "image_url_size": 359863,
+        "drm_data": "EEcATQUUAwMFTwQNCRoIBgNNAwQFFAMDBU8DCAkaCAYDTQAEBRQDAwVPDAgJ\nGggGA00FAQAJHwcFBUkLCQcUAgYB\n"
+      },
+      {
+        "id": 302534,
+        "order": 1,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302534/image/scrambled-474c00d8da0f7bb5105ab056209780b5.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302534/image/scrambled-474c00d8da0f7bb5105ab056209780b5.jpg",
+        "image_url_size": 399059,
+        "drm_data": "EEcATQIMAhsEBgVECAcMAx4AAQFJCgIGGAIACEUOCQMeAAEBSQ0HBhgCAAhF\nBxQCBgFIAAYMAhsEBgVECAIJAx4CAk0EDAIbBAYFRAgFCQMeAAEBSQ8CBhgC\nAAg=\n"
+      },
+      {
+        "id": 302535,
+        "order": 2,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302535/image/scrambled-872fcb8a1b9410ba0630f271b0a95b74.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302535/image/scrambled-872fcb8a1b9410ba0630f271b0a95b74.jpg",
+        "image_url_size": 487889,
+        "drm_data": "EEcATQQMAhsEBgVEDwcJHgIEBE0MCQIbBAYFRA4CCR4CBARNBAwCBhgAA0QJ\nGggGA00FAgAJHwcAA0kMDAcUAgYBSAAFDAIbBAYFRAoHCR4CBARNBAsCBhgC\nAAg=\n"
+      },
+      {
+        "id": 302536,
+        "order": 3,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302536/image/scrambled-14a33ae6f513efffe26b4789f5780248.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302536/image/scrambled-14a33ae6f513efffe26b4789f5780248.jpg",
+        "image_url_size": 521573,
+        "drm_data": "EEcATQIMAhsEBgVECAIJHgIEBE0ECwIGGAIACEUDDAMeAAEBSQgHBgUeBg5F\nBgkGAxwFBAVFAhsEBgVEDwcJHgIEBE0ECgcGGAIACEUECQMeAAEBSQACBhgC\nAAg=\n"
+      },
+      {
+        "id": 302537,
+        "order": 4,
+        "width": 1500,
+        "height": 1125,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302537/image/scrambled-d66f465dcf8d83c74f366f97cd0cf117.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302537/image/scrambled-d66f465dcf8d83c74f366f97cd0cf117.jpg",
+        "image_url_size": 727661,
+        "drm_data": "EEcATQMJAhsEBgVEDQIJHgIEBE0MCQIbBAYFRAgCCR4CBARNBAkHBhgEAEQO\nAgkeAgQETQUUAwMFTwYICRoIBgM=\n"
+      },
+      {
+        "id": 302538,
+        "order": 5,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302538/image/scrambled-532854c2a86cbc305a2364f6609acc13.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302538/image/scrambled-532854c2a86cbc305a2364f6609acc13.jpg",
+        "image_url_size": 559367,
+        "drm_data": "EEcATQQMAhsEBgVEDwcJHgIEBE0ECwIGGAIACEUGCgYDHAUEBUUDBgADGAkM\nB0UAAwEZAAAJTgIAAxgJDAdFAx4AAQFJCAcGBR4GDkUOCQMeAAEBSQ4HBhgC\nAAg=\n"
+      },
+      {
+        "id": 302539,
+        "order": 6,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302539/image/scrambled-1c5924d92884904a424890dd3ff94540.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302539/image/scrambled-1c5924d92884904a424890dd3ff94540.jpg",
+        "image_url_size": 640944,
+        "drm_data": "EEcATQUUAwMFTwQNCQcUAAVNBQIACR8HAANJCwkHFAIGAUgABwkCGwQGBUQA\nBwkeAgQETQMJAhsEBgVECAcMAx4AAQFJDQcGGAIACEUGDAMeAAEBSQ4HBhgC\nAAg=\n"
+      },
+      {
+        "id": 302540,
+        "order": 7,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302540/image/scrambled-9fcf98a776d14f7b7be73b6cfb590ba2.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302540/image/scrambled-9fcf98a776d14f7b7be73b6cfb590ba2.jpg",
+        "image_url_size": 656740,
+        "drm_data": "EEcATQYJAhsEBgVEDQIJHgIEBE0EDAIbBAYFRAkaCAYDTQUEBQkfBQNPDAgJ\nGggGA00FAgAJHwcAA0kJCQIJHgIEBE0DCQIbBAYFRA4CCR4CBARNBAsCBhgC\nAAg=\n"
+      },
+      {
+        "id": 302541,
+        "order": 8,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302541/image/scrambled-d3636334a7ffaeba9df536e8ee6388de.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302541/image/scrambled-d3636334a7ffaeba9df536e8ee6388de.jpg",
+        "image_url_size": 500307,
+        "drm_data": "EEcATQQLAgYYAgAIRQEJAx4AAQFJCR8HAANJAQkHFAIGAUgABQwCGwQGBUQO\nAgkeAgQETQQMAhsEBgVEDQIJHgIEBE0GCQIbBAYFRAgCCQMeAgJNBAoHBhgC\nAAg=\n"
+      },
+      {
+        "id": 302542,
+        "order": 9,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302542/image/scrambled-916627ef0d5e855c1004d74f02633ac3.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302542/image/scrambled-916627ef0d5e855c1004d74f02633ac3.jpg",
+        "image_url_size": 543546,
+        "drm_data": "EEcATQwJAhsEBgVECAIJAx4CAk0EDAIbBAYFRA0CCR4CBARNBRQDAwVPAwgJ\nGggGA00HAQUUAwMFTwQIDAcUAgYBSAAGDAIbBAYFRAgFCQMeAAEBSQ4HBhgC\nAAg=\n"
+      },
+      {
+        "id": 302543,
+        "order": 10,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302543/image/scrambled-2cf65f890a4e9c6ccef88a6a6e0f5688.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302543/image/scrambled-2cf65f890a4e9c6ccef88a6a6e0f5688.jpg",
+        "image_url_size": 625092,
+        "drm_data": "EEcATQUUAwMFTwQLDAcUAgYBSAgFCR8HAANJCQkCCR4CBARNAgwCGwQGBUQP\nBwkeAgQETQQMAgYYAANEDQIJHgIEBE0ECwIGGAIACEUGDAMeAAEBSQoCBhgC\nAAg=\n"
+      },
+      {
+        "id": 302544,
+        "order": 11,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302544/image/scrambled-171fa4cb00e43f85b146684544808bd0.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302544/image/scrambled-171fa4cb00e43f85b146684544808bd0.jpg",
+        "image_url_size": 528733,
+        "drm_data": "EEcATQQMAgYYAANECAIJHgIEBE0ECQcGGAIACEUDDAMeAAEBSQgABgUeBA0J\nSwgABgEZAAAJTgUFAxgJDAdFAx4AAQFJDgcGGAIACEUOCQMeAAEBSQ8CBhgC\nAAg=\n"
+      },
+      {
+        "id": 302545,
+        "order": 12,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302545/image/scrambled-dbb318207269518a009853bc7bc609ba.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302545/image/scrambled-dbb318207269518a009853bc7bc609ba.jpg",
+        "image_url_size": 443821,
+        "drm_data": "EEcATQQLAgYYAgAIRQEJAx4AAQFJCAIDBR4EDQlLCAAGARkAAAlOBwADGAkM\nB0UCBgEEHAYPTg8FAxgJDAdFAx4AAQFJCgIGGAIACEUDDAMeAAEBSQ4HBhgC\nAAg=\n"
+      },
+      {
+        "id": 302546,
+        "order": 13,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302546/image/scrambled-8c59e92f4edc3dc008b7d6180675c979.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302546/image/scrambled-8c59e92f4edc3dc008b7d6180675c979.jpg",
+        "image_url_size": 475661,
+        "drm_data": "EEcATQQKBwYYAgAIRQQJAx4AAQFJCR8HAANJDAwHFAIGAUgGAAkfBwADSQkL\nBwkeAgQETQQMAgYYAANEDwcJHgIEBE0EDAIbBAYFRAAHCR4CBARNBAkHBhgC\nAAg=\n"
+      },
+      {
+        "id": 302547,
+        "order": 14,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302547/image/scrambled-7bfd695087ebe26070398fcdb4ac27fa.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302547/image/scrambled-7bfd695087ebe26070398fcdb4ac27fa.jpg",
+        "image_url_size": 484068,
+        "drm_data": "EEcATQIMAhsEBgVEDwcJHgIEBE0ECQcGGAIACEUDDAMeAAEBSQgHBgUeBg5F\nBgoGAxwFBAVFAhsEBgVECgcJHgIEBE0MCQIbBAYFRAgFCQMeAAEBSQgHBhgC\nAAg=\n"
+      },
+      {
+        "id": 302548,
+        "order": 15,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302548/image/scrambled-ef2c9041961fbaed626bf66700022f02.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302548/image/scrambled-ef2c9041961fbaed626bf66700022f02.jpg",
+        "image_url_size": 377718,
+        "drm_data": "EEcATQYJAhsEBgVEDgIJHgIEBE0DCQIbBAYFRAgCCR4CBARNAQwCGwQGBUQI\nAgkDHgICTQQJBwYYAgAIRQcUAgYBSAgFCR8HAANJCQsHCR4CBARNBAoHBhgC\nAAg=\n"
+      },
+      {
+        "id": 302549,
+        "order": 16,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302549/image/scrambled-72d31f6e5063cb1b6872c8848aab87ee.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302549/image/scrambled-72d31f6e5063cb1b6872c8848aab87ee.jpg",
+        "image_url_size": 451509,
+        "drm_data": "EEcATQYJAhsEBgVECAIJHgIEBE0MCQIbBAYFRA8HCR4CBARNAgwCGwQGBUQN\nAgkeAgQETQQMAgYYAANECAcMAx4AAQFJCAEDBR4EDQlLCR4CBARNBAsCBhgC\nAAg=\n"
+      },
+      {
+        "id": 302550,
+        "order": 17,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302550/image/scrambled-d0113e8f402986893597286c741ea5f2.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302550/image/scrambled-d0113e8f402986893597286c741ea5f2.jpg",
+        "image_url_size": 426848,
+        "drm_data": "EEcATQYJAhsEBgVECAIJAx4CAk0DCQIbBAYFRAgCCR4CBARNAQwCGwQGBUQO\nAgkeAgQETQQJBwYYAgAIRQYLAwMcBQQFRQMFAAMYCQwHRQoDARkAAAlOBhgC\nAAg=\n"
+      },
+      {
+        "id": 302551,
+        "order": 18,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302551/image/scrambled-e85b287577de0e75d8f5e588494c8a0b.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302551/image/scrambled-e85b287577de0e75d8f5e588494c8a0b.jpg",
+        "image_url_size": 493175,
+        "drm_data": "EEcATQIMAhsEBgVECAIJAx4CAk0MCQIbBAYFRAgEDAMeAAEBSQ8CBhgCAAhF\nBAkDHgABAUkIAgMFHgQNCUsIAQMBGQAACU4GGAIACEUGDAMeAAEBSQ0HBhgC\nAAg=\n"
+      },
+      {
+        "id": 302552,
+        "order": 19,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302552/image/scrambled-601b77714de3eafb5182bf09f5f593b6.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302552/image/scrambled-601b77714de3eafb5182bf09f5f593b6.jpg",
+        "image_url_size": 570560,
+        "drm_data": "EEcATQIMAhsEBgVEAAcJHgIEBE0FFAMDBU8EDQkaCAYDTQUBAAkfBwADSQsJ\nBxQCBgFIBQAJHwcAA0kOCQcUAgYBSAAACQIbBgVJCQsHCR4CBARNBAoHBhgC\nAAg=\n"
+      },
+      {
+        "id": 302553,
+        "order": 20,
+        "width": 1024,
+        "height": 1536,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302553/image/scrambled-9d4d8a156afca7665f47a32bc61dd5ab.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302553/image/scrambled-9d4d8a156afca7665f47a32bc61dd5ab.jpg",
+        "image_url_size": 550120,
+        "drm_data": "EEcATQwJAhsEBgVEDgIJHgIEBE0ECwIGGAIACEUGCgYDHAUEBUUDBgADGAkM\nB0UDHgABAUkNBwYYAgAIRQEJAx4AAQFJCgIGGAIACEUGDAMeAAEBSQgHBgUe\nBg4=\n"
+      },
+      {
+        "id": 302554,
+        "order": 21,
+        "width": 1024,
+        "height": 1573,
+        "status": "processed",
+        "image_url": "https://storage-ct.lrclib.net/file/cuutruyen/uploads/page/302554/image/scrambled-7020e2b16669505fd714aa7059d80adc.jpg",
+        "image_path": "/file/cuutruyen/uploads/page/302554/image/scrambled-7020e2b16669505fd714aa7059d80adc.jpg",
+        "image_url_size": 258664,
+        "drm_data": "EEcATQQKBwYYAgAIRQYMAwMcAwJJCAIDBR4EDQlLDgYDHAUEBUUDBAUDGAkM\nB0UHBgEZAAAJTgYYAgAIRQEJAx4AAQFJCgIGGAIACEUOCQMeAAEBSQgHBhgC\nAAg=\n"
+      }
+    ]
+  }
+}
