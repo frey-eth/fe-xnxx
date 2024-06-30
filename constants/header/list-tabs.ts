@@ -4,8 +4,8 @@ export const ListTabs = [
     link: "/",
   },
   {
-    title: "Trending",
-    link: "/",
+    title: "Community",
+    link: "/community",
   },
   {
     title: "New",

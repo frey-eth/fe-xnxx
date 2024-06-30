@@ -36,11 +36,11 @@ const Header = () => {
     >
       <div className="w-full px-6 py-4 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black">
         <div className="flex flex-row items-center">
-          <Link href={"/"} className="sm:text-3xl text-xl font-bold">
+          <Link href={"/"} className="sm:text-3xl text-xl font-liberi">
             MangaHub
           </Link>
         </div>
-        <div className="w-[400px] px-4 py-2 border rounded-md flex flex-row items-center max-md:hidden">
+        <div className="w-[400px] px-4 py-2 border rounded-md flex flex-row items-center max-sm:hidden">
           <input
             type="text"
             className=" bg-transparent flex-1 outline-none"
@@ -48,11 +48,15 @@ const Header = () => {
           />
           <FaSearch size={16} />
         </div>
-        <div className="flex flex-row items-center gap-4 max-md:hidden">
+        <div className="flex flex-row items-center gap-4 max-sm:hidden">
           {ListTabs.map((tab) => (
-            <div key={tab.title} className="font-medium text-md">
+            <Link
+              href={tab.link}
+              key={tab.title}
+              className="font-medium text-md"
+            >
               {tab.title}
-            </div>
+            </Link>
           ))}
         </div>
         <div className="sm:hidden ">
