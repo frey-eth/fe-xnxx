@@ -19,6 +19,7 @@ const Banner = () => {
     <div className="w-full">
       <Swiper
         effect={"coverflow"}
+        autoplay={{ delay: 2500 }}
         grabCursor={true}
         centeredSlides={true}
         loop={true}

@@ -45,6 +45,8 @@ const Category = () => {
           loop={true}
           slidesPerView={isMobile ? 2.2 : 5}
           centerInsufficientSlides={true}
+          autoplay={{ delay: 4000 }}
+          slidesPerGroup={2}
         >
           {manga_list.map((manga, index) => (
             <SwiperSlide key={index}>
