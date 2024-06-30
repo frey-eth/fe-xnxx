@@ -12,13 +12,25 @@ const Footer = () => {
             MangaHub
           </div>
           <div className="flex flex-row justify-center items-center gap-4">
-            <a href="#" className="text-md font-medium ">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/literally.dng"
+              className="text-md font-medium "
+            >
               <AiOutlineFacebook size={30} />
             </a>
-            <a href="#" className="text-md font-medium ">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/literally.dng"
+              className="text-md font-medium "
+            >
               <RxDiscordLogo size={30} />
             </a>
-            <a href="#" className="text-md font-medium ">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/literally.dng"
+              className="text-md font-medium "
+            >
               <FaCcPaypal size={30} />
             </a>
           </div>
