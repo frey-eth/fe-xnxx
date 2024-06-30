@@ -8,7 +8,7 @@ import Link from "next/link";
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
-
+  const [openMenu, setOpenMenu] = useState(false);
   const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
@@ -34,7 +34,7 @@ const Header = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="w-full px-6 py-4 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black">
+      <div className="w-full px-5 py-3 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black">
         <div className="flex flex-row items-center">
           <Link href={"/"} className="sm:text-3xl text-xl font-liberi">
             MangaHub
@@ -59,9 +59,34 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        <div className="sm:hidden ">
-          <HiOutlineMenuAlt3 size={20} />
+        <div className="sm:hidden">
+          <HiOutlineMenuAlt3
+            size={20}
+            onClick={() => setOpenMenu((prev) => !prev)}
+          />
         </div>
+
+        {openMenu && (
+          <div className="absolute top-[80px] left-0 w-full bg-white bg-opacity-90 flex flex-col items-center justify-center px-2 py-3">
+            <div className="w-full px-2 py-1 border rounded-md flex flex-row items-center shadow text-black">
+              <input
+                type="text"
+                className=" bg-transparent flex-1 outline-none"
+                placeholder="Search ..."
+              />
+              <FaSearch size={14} />
+            </div>
+            {ListTabs.map((tab) => (
+              <Link
+                href={tab.link}
+                key={tab.title}
+                className="px-3 font-medium"
+              >
+                {tab.title}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
