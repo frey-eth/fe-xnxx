@@ -13,8 +13,9 @@ const CommentList = () => {
     <div className="w-full flex flex-col gap-4">
       <AddComment handleAddComment={handleAddComment} />
       <div className="flex flex-col gap-3 w-full">
-        {comments.map((comment) => (
+        {comments.map((comment, index) => (
           <Comment
+            key={index}
             avatar={comment.avatar}
             comment={comment.comment}
             date={comment.date}
