@@ -4,7 +4,7 @@ import ListManga from "@/components/home/list-manga";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col gap-4">
+    <main className="w-full flex flex-col gap-4 pt-[100px]">
       <Banner />
       <Category />
       <ListManga />

@@ -70,10 +70,10 @@ const Header = () => {
           <div
             className={`absolute top-[70px] py-3 left-0 w-full h-screen bg-white bg-opacity-90 flex flex-col items-center justify-start px-2 gap-3`}
           >
-            <div className="w-full px-2 py-1 border rounded-md flex flex-row items-center shadow text-black">
+            <div className="w-full px-3 py-2 border rounded-md flex flex-row items-center shadow text-black bg-white">
               <input
                 type="text"
-                className=" bg-transparent flex-1 outline-none"
+                className=" bg-transparent flex-1 outline-none placeholder:text-black "
                 placeholder="Search ..."
               />
               <FaSearch size={14} />
@@ -82,7 +82,7 @@ const Header = () => {
               <Link
                 href={tab.link}
                 key={tab.title}
-                className="px-3 font-medium"
+                className="px-3 font-bold uppercase"
               >
                 {tab.title}
               </Link>

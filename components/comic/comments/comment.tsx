@@ -1,0 +1,36 @@
+import React from "react";
+import { AiOutlineLike } from "react-icons/ai";
+
+const Comment = () => {
+  return (
+    <div className="flex flex-row gap-2 w-full">
+      <div className="w-12 h-12 bg-gray-500 rounded-full overflow-hidden">
+        <img src="/images/avatar.png" className="w-full h-full object-cover" />
+      </div>
+      <div className="flex flex-col gap-1 w-full">
+        <div className="flex flex-col gap-1 w-full rounded-2xl p-2 bg-gray-200">
+          <div className="flex flex-row w-full justify-between">
+            <h2 className="text-black font-semibold text-sm">Frey</h2>
+          </div>
+          <p className="text-black text-[16px] leading-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            fringilla fringilla leo, at ultricies turpis.
+          </p>
+        </div>
+
+        <div className="flex flex-row justify-between items-start px-2">
+          <div className="flex flex-row gap-2 text-[12px] leading-3">
+            <span className="text-gray-400">2 days ago</span>
+            <button className="text-black font-semibold">Thích</button>
+            <button className="text-black font-semibold">Phản hồi</button>
+          </div>
+          <span className="flex flex-row gap-1 text-[12px] font-medium">
+            317 <AiOutlineLike size={16} />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Comment;

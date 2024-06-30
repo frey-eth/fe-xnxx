@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 type CategoryCardProps = {
@@ -9,7 +10,10 @@ type CategoryCardProps = {
 
 const CategoryCard = ({ title, image }: CategoryCardProps) => {
   return (
-    <div className="bg-white mx-1 border-2 border-black roudned-lg overflow-hidden sm:h-[360px] h-[280px] flex flex-col justify-between">
+    <Link
+      href={"/jujutsu-kaisen"}
+      className="bg-white mx-1 border-2 border-black roudned-lg overflow-hidden sm:h-[360px] h-[280px] flex flex-col justify-between"
+    >
       <img src={image} className="object-cover sm:h-[220px] h-[160px]" />
 
       <div className="flex flex-col gap-2 p-2">
@@ -30,7 +34,7 @@ const CategoryCard = ({ title, image }: CategoryCardProps) => {
           Read
         </button>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,9 +1,13 @@
 import { MangaCardType } from "@/types/manga";
+import Link from "next/link";
 import React from "react";
 
 const MangaCard = ({ manga }: { manga: MangaCardType }) => {
   return (
-    <div className="p-1 flex flex-col max-sm:w-[180px] w-[360px] border">
+    <Link
+      href={"/jujusu-kaisen"}
+      className="p-1 flex flex-col max-sm:w-[180px] w-[360px] border"
+    >
       <div className="w-full h-[260px] overflow-hidden">
         <img
           src={manga.img}
@@ -18,7 +22,7 @@ const MangaCard = ({ manga }: { manga: MangaCardType }) => {
           <p>{manga.release}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
