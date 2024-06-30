@@ -33,7 +33,7 @@ const AddComment = ({ handleAddComment }: AddCommentProps) => {
             name: "User nào đó",
             avatar: "/images/avatar.png",
             comment,
-            date: "2021-09-01",
+            date: new Date().toUTCString(),
           });
           setComment("");
         }}

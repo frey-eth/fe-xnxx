@@ -1,4 +1,5 @@
 import { CommentType } from "@/types/comment";
+import { timeAgo } from "@/utils/time-convert";
 import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 
@@ -18,7 +19,7 @@ const Comment = ({ avatar, name, comment, date }: CommentType) => {
 
         <div className="flex flex-row justify-between items-start px-2">
           <div className="flex flex-row gap-2 text-[12px] leading-3">
-            <span className="text-gray-400">{date}</span>
+            <span className="text-gray-400">{timeAgo(date)}</span>
             <button className="text-black font-semibold">Thích</button>
             <button className="text-black font-semibold">Phản hồi</button>
           </div>
