@@ -2,15 +2,15 @@
 import React, { useState } from "react";
 import CategoryCard from "./category-card";
 import ProcessingBar from "./processing-bar";
-import { CheckDevice } from "@/utils/check-device";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { manga_list } from "@/constants/list-manga";
+import { checkDevice } from "@/utils/check-device";
 
 const ListCategory = ["Manhwa", "Manhua", "Manga", "Webtoon"];
 
 const Category = () => {
   const [activeCategory, setCategory] = useState(ListCategory[0]);
-  const isMobile = CheckDevice();
+  const isMobile = checkDevice();
   const handleComplete = () => {
     setCategory((prevCategory) => {
       const currentIndex = ListCategory.indexOf(prevCategory);
