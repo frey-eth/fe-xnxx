@@ -8,7 +8,7 @@ export const ListTabs = [
     link: "/community",
   },
   {
-    title: "New",
-    link: "/",
+    title: "Login",
+    link: "/login",
   },
 ];

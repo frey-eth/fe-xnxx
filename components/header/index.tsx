@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { ListTabs } from "@/constants/header/list-tabs";
 import { FaSearch } from "react-icons/fa";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { SiDiscord } from "react-icons/si";
+import { GrPaypal } from "react-icons/gr";
+
 import Link from "next/link";
 
 const Header = () => {
@@ -32,13 +36,13 @@ const Header = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="w-full px-5 py-3 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black">
+      <div className="w-full px-5 py-3 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black gap-2">
         <div className="flex flex-row items-center">
           <Link href={"/"} className="sm:text-3xl text-xl font-liberi">
             MangaHub
           </Link>
         </div>
-        <div className="w-[400px] px-4 py-2 border rounded-md flex flex-row items-center max-sm:hidden">
+        <div className="max-w-[400px] w-full px-4 py-2 border rounded-md flex flex-row items-center max-md:hidden">
           <input
             type="text"
             className=" bg-transparent flex-1 outline-none"
@@ -46,18 +50,18 @@ const Header = () => {
           />
           <FaSearch size={16} />
         </div>
-        <div className="flex flex-row items-center gap-4 max-sm:hidden">
+        <div className="flex flex-row items-center gap-4 max-md:hidden">
           {ListTabs.map((tab) => (
             <Link
               href={tab.link}
               key={tab.title}
-              className="font-medium text-md"
+              className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
             >
               {tab.title}
             </Link>
           ))}
         </div>
-        <div className="sm:hidden">
+        <div className="md:hidden">
           <HiOutlineMenuAlt3
             size={20}
             onClick={() => setOpenMenu((prev) => !prev)}
@@ -87,6 +91,20 @@ const Header = () => {
               {tab.title}
             </Link>
           ))}
+
+          <div className="flex flex-row w-full justify-center gap-4 p-2">
+            <a href="https://www.facebook.com/literally.dng" target="_blank">
+              <FaSquareFacebook size={40} />
+            </a>
+
+            <a href="https://www.facebook.com/literally.dng" target="_blank">
+              <SiDiscord size={40} />
+            </a>
+
+            <a href="https://www.facebook.com/literally.dng" target="_blank">
+              <GrPaypal size={40} />
+            </a>
+          </div>
         </div>
       </div>
     </div>
