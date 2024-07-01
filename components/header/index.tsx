@@ -64,29 +64,30 @@ const Header = () => {
           />
         </div>
 
-        {openMenu && (
-          <div
-            className={`absolute top-[70px] py-3 left-0 w-full h-screen bg-white bg-opacity-90 flex flex-col items-center justify-start px-2 gap-3`}
-          >
-            <div className="w-full px-3 py-2 border rounded-md flex flex-row items-center shadow text-black bg-white">
-              <input
-                type="text"
-                className=" bg-transparent flex-1 outline-none placeholder:text-black "
-                placeholder="Search ..."
-              />
-              <FaSearch size={14} />
-            </div>
-            {ListTabs.map((tab) => (
-              <Link
-                href={tab.link}
-                key={tab.title}
-                className="px-3 font-bold uppercase"
-              >
-                {tab.title}
-              </Link>
-            ))}
+        <div
+          className={`absolute  py-3 left-0 w-full h-screen bg-white bg-opacity-90 flex flex-col items-center justify-start px-2 gap-3 ${
+            openMenu ? "top-[70px]" : "-top-[1000px]"
+          } transition-all duration-200`}
+        >
+          <div className="w-full px-3 py-2 border rounded-md flex flex-row items-center shadow text-black bg-white">
+            <input
+              type="text"
+              className=" bg-transparent flex-1 outline-none placeholder:text-black "
+              placeholder="Search ..."
+            />
+            <FaSearch size={14} />
           </div>
-        )}
+          {ListTabs.map((tab) => (
+            <Link
+              onClick={() => setOpenMenu(false)}
+              href={tab.link}
+              key={tab.title}
+              className="px-3 font-bold uppercase buttonCategory bg-black text-white py-1"
+            >
+              {tab.title}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
