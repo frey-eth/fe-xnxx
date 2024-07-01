@@ -8,13 +8,13 @@ const Login = () => {
   return (
     <div className="w-full h-screen flex items-center justify-center px-4 flex-col gap-3 ">
       <div className="flex flex-col gap-2 w-full max-w-lg">
-        <Link
-          href={"/"}
-          className="flex flex-row items-center font-medium text-sm"
-        >
-          <IoIosArrowBack size={24} className="text-black" /> Home
-        </Link>
-        <div className="w-full bg-[#fbfbfb] shadow-2xl rounded-md p-4 flex flex-col gap-3">
+        <div className="w-full bg-[#fbfbfb] shadow-2xl rounded-md p-4 flex flex-col gap-3 relative">
+          <Link
+            href={"/"}
+            className="flex flex-row items-center font-medium text-sm absolute -top-10 left-0"
+          >
+            <IoIosArrowBack size={24} className="text-black" /> Home
+          </Link>
           <div className="flex flex-col">
             <h1 className="font-bold text-lg">Login your account</h1>
             <p className="text-sm font-medium text-gray-500">

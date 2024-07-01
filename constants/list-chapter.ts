@@ -13,10 +13,14 @@ export const ListChapter = [
   },
 
   {
-    id: 5,
+    id: 4,
     name: "Giao lưu đại hội võ thuật",
   },
 
+  {
+    id: 5,
+    name: "Giao lưu đại hội võ thuật",
+  },
   {
     id: 6,
     name: "Giao lưu đại hội võ thuật",
@@ -25,11 +29,11 @@ export const ListChapter = [
     id: 7,
     name: "Giao lưu đại hội võ thuật",
   },
+
   {
     id: 8,
     name: "Giao lưu đại hội võ thuật",
   },
-
   {
     id: 9,
     name: "Giao lưu đại hội võ thuật",
@@ -55,11 +59,6 @@ export const ListChapter = [
   },
   {
     id: 14,
-    name: "Giao lưu đại hội võ thuật",
-  },
-
-  {
-    id: 15,
     name: "Giao lưu đại hội võ thuật",
   },
 ];

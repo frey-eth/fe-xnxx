@@ -72,7 +72,7 @@ const Panigation = ({ maxChapter }: PanigationProps) => {
 
         <button
           className={`p-2 bg-black text-white rounded-md ${
-            Number(currentChapter) === maxChapter ? "opacity-50" : ""
+            Number(currentChapter) >= maxChapter ? "opacity-50" : ""
           }`}
           disabled={Number(currentChapter) >= maxChapter}
           onClick={() =>
