@@ -31,7 +31,7 @@ const ContributorCard = ({
   avatar,
 }: ContributorCardProps) => {
   return (
-    <div className="py-2 px-4 rounded-md bg-white shadow-lg  flex flex-col gap-3 w-full max-w-[185px]">
+    <div className="py-2 px-4 rounded-md bg-white shadow-lg  flex flex-col gap-3 w-full max-w-[185px] md:max-w-sm">
       <div className="flex flex-col items-center gap-1">
         <div className="p-1 rounded-full overflow-hidden border bg-white shadow-lg ">
           <div className="w-20 h-20 min-w-20 rounded-full overflow-hidden">
