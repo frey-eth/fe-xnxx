@@ -6,7 +6,11 @@ const ChapterList = () => {
   return (
     <div className="flex flex-col h-[300px] overflow-y-auto w-full border rounded overflow-hidden">
       {ListChapter.map((chapter) => (
-        <SingleChapter title={chapter.name} chapter={chapter.id} />
+        <SingleChapter
+          title={chapter.name}
+          chapter={chapter.id}
+          key={chapter.id}
+        />
       ))}
     </div>
   );
