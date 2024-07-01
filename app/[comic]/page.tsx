@@ -5,7 +5,7 @@ import { CiBookmark } from "react-icons/ci";
 import { FaRegEye } from "react-icons/fa";
 import { LiaCalendarDaySolid } from "react-icons/lia";
 import { MdOutlineUpdate } from "react-icons/md";
-import { FcNews } from "react-icons/fc";
+import { TbFileDescription } from "react-icons/tb";
 import { FaTableList } from "react-icons/fa6";
 import { AiFillSignal } from "react-icons/ai";
 import { FaRegComments } from "react-icons/fa6";
@@ -94,7 +94,8 @@ const PageComic = () => {
       <div className="flex flex-col items-start gap-4 max-md:mx-2 mx-32 p-3 shadow-xl rounded">
         <div className="flex flex-col gap-4 ">
           <h1 className="text-lg font-bold flex flex-row gap-2">
-            <FcNews size={24} /> Description
+            <TbFileDescription size={24} className="text-gray-500" />{" "}
+            Description
           </h1>
           <p className="text-sm text-gray-500  p-3">
             Yuuji Itadori là một thiên tài có tốc độ và sức mạnh, nhưng cậu ấy
@@ -109,11 +110,11 @@ const PageComic = () => {
         </div>
         <div className=" flex flex-col gap-4 w-full">
           <h1 className="text-lg font-bold flex flex-row gap-2">
-            <FaTableList size={24} className="text-orange-500" /> Chapters
+            <FaTableList size={24} className="text-gray-500" /> Chapters
           </h1>
           <ChapterList />
           <h1 className="text-lg font-bold flex flex-row gap-2">
-            <FaRegComments size={24} className="text-orange-500" /> Bình luận
+            <FaRegComments size={24} className="text-gray-500" /> Bình luận
           </h1>
           <CommentList />
         </div>

@@ -6,7 +6,7 @@ import { AiOutlineLike } from "react-icons/ai";
 const Comment = ({ avatar, name, comment, date }: CommentType) => {
   return (
     <div className="flex flex-row gap-2 w-full">
-      <div className="w-12 h-12 bg-gray-500 rounded-full overflow-hidden">
+      <div className="w-12 h-12 min-w-12 bg-gray-500 rounded-full overflow-hidden">
         <img src={avatar} className="w-full h-full object-cover" />
       </div>
       <div className="flex flex-col gap-1 w-full">
