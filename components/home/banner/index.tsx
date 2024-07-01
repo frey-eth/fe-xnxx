@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";

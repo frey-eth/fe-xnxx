@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import CategoryCard from "./category-card";
 import ProcessingBar from "./processing-bar";
 import { Swiper, SwiperSlide } from "swiper/react";

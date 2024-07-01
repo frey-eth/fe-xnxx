@@ -1,6 +1,5 @@
 import { CommentType } from "@/types/comment";
 import { timeAgo } from "@/utils/time-convert";
-import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 
 const Comment = ({ avatar, name, comment, date }: CommentType) => {

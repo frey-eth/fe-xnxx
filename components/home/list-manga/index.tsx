@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import MangaCard from "./manga-card";
 import { manga_list } from "@/constants/list-manga";
 

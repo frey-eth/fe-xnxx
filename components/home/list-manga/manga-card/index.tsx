@@ -1,6 +1,5 @@
 import { MangaCardType } from "@/types/manga";
 import Link from "next/link";
-import React from "react";
 
 const MangaCard = ({ manga }: { manga: MangaCardType }) => {
   return (

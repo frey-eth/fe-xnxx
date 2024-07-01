@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { RxDiscordLogo } from "react-icons/rx";
 import { FaCcPaypal } from "react-icons/fa";

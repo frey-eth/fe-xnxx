@@ -1,4 +1,3 @@
-import React from "react";
 import SingleChapter from "./signle-chapter";
 import { ListChapter } from "@/constants/list-chapter";
 

@@ -8,10 +8,12 @@ import { SiDiscord } from "react-icons/si";
 import { GrPaypal } from "react-icons/gr";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const location = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
   const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -33,8 +35,8 @@ const Header = () => {
   return (
     <div
       className={`w-full p-4 fixed z-[10] transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
+        location == "/login" && "hidden"
+      } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="w-full px-5 py-3 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black gap-2">
         <div className="flex flex-row items-center">
