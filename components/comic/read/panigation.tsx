@@ -21,7 +21,6 @@ const Panigation = ({ maxChapter }: PanigationProps) => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    setOpenListChapter(false);
 
     if (scrollTop > lastScrollTop) {
       setIsVisible(false);
@@ -63,7 +62,7 @@ const Panigation = ({ maxChapter }: PanigationProps) => {
 
         <button
           onClick={() => setOpenListChapter((prev) => !prev)}
-          className="text-white max-md:text-sm text-[16px] bg-black py-2 flex flex-row items-center justify-center gap-1 px-4 rounded-md font-semibold w-full max-w-md text-center opacity-90 whitespace-nowrap text-ellipsis overflow-hidden"
+          className="text-white text-sm md:text-xs text-[16px] bg-black py-2 flex flex-row items-center justify-center gap-1 px-4 rounded-md font-medium w-full max-w-md text-center opacity-90 whitespace-nowrap text-ellipsis overflow-hidden"
         >
           Chapter {currentChapter} :
           <span className="font-medium text-sm md:text-xs">
