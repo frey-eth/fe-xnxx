@@ -3,7 +3,6 @@ import { ListChapter } from "@/constants/list-chapter";
 import useClickOutside from "@/hooks/useClickOutside";
 import { useSearchChapter } from "@/hooks/useSearchChapter";
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback } from "react";
 
 type ChapterPanigationProps = {
   isOpen: boolean;

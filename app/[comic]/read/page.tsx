@@ -7,6 +7,7 @@ import { IoChevronBackOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { useInView } from "react-intersection-observer";
 import Panigation from "@/components/comic/read/panigation";
+import { ListChapter } from "@/constants/list-chapter";
 
 const ReadPage = () => {
   const router = useRouter();
@@ -60,7 +61,7 @@ const ReadPage = () => {
         ))}
       </div>
 
-      <Panigation maxChapter={101} />
+      <Panigation maxChapter={ListChapter.length} />
     </div>
   );
 };
