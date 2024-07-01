@@ -29,7 +29,7 @@ const ListChapterPanigation = ({ isOpen, setOpen }: ChapterPanigationProps) => {
             setOpen(false);
           }}
           key={chapter.id}
-          className="text-white text-sm py-3 flex flex-row items-center gap-1 px-5 rounded-md font-medium border-opacity-50 border-b w-full text-center opacity-90 whitespace-nowrap text-ellipsis overflow-hidden"
+          className="text-white text-xs py-4 flex flex-row items-center gap-1 px-5 font-medium border-opacity-50 border-b w-full text-center opacity-90 whitespace-nowrap text-ellipsis overflow-hidden"
         >
           Chapter {chapter.id}: {chapter.name}
         </button>

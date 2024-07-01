@@ -10,16 +10,16 @@ const list_contributors = [
     instagram: "https://www.instagram.com/literally_dng",
     messenger: "https://www.messenger.com/t/literally.dng",
   },
-  {
-    name: "Dang Phan",
-    role: "Developer",
-    level: 1,
-    avatar:
-      "https://cdn.icon-icons.com/icons2/2787/PNG/512/black_cat_icon_177458.png",
-    facebook: "https://www.facebook.com/literally.dng",
-    instagram: "https://www.instagram.com/literally_dng",
-    messenger: "https://www.messenger.com/t/literally.dng",
-  },
+  // {
+  //   name: "Dang Phan",
+  //   role: "Developer",
+  //   level: 1,
+  //   avatar:
+  //     "https://cdn.icon-icons.com/icons2/2787/PNG/512/black_cat_icon_177458.png",
+  //   facebook: "https://www.facebook.com/literally.dng",
+  //   instagram: "https://www.instagram.com/literally_dng",
+  //   messenger: "https://www.messenger.com/t/literally.dng",
+  // },
 ];
 
 const Community = () => {

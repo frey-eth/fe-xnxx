@@ -10,7 +10,7 @@ const Login = () => {
       <div className="flex flex-col gap-2 w-full max-w-sm">
         <Link
           href={"/"}
-          className="flex flex-row items-center  font-medium text-sm underline"
+          className="flex flex-row items-center  font-medium text-sm"
         >
           <IoIosArrowBack size={24} className="text-black" /> Home
         </Link>
