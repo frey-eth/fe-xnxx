@@ -35,7 +35,11 @@ const Header = () => {
   return (
     <div
       className={`w-full p-4 fixed z-[10] transition-transform duration-300 ${
-        location == "/login" && "hidden"
+        location === "/login" ||
+        location === "/register" ||
+        location === "/reset-password"
+          ? "hidden"
+          : ""
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="w-full px-5 py-3 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black gap-2">

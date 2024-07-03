@@ -1,10 +1,21 @@
+"use client";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { RxDiscordLogo } from "react-icons/rx";
 import { FaCcPaypal } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const location = usePathname();
   return (
-    <div className="w-full p-4">
+    <div
+      className={`w-full p-4 ${
+        location === "/login" ||
+        location === "/register" ||
+        location === "/reset-password"
+          ? "hidden"
+          : ""
+      }`}
+    >
       <div className="w-full px-4 py-2 rounded-lg shadow-lg backdrop-blur border">
         <div className="flex flex-row items-center justify-between">
           <div className="text-2xl font-liberi text-center p-3 italic">
