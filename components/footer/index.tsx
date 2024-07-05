@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="text-center text-sm text-gray-500">
-          MangaHub &copy; 2021. All rights reserved.
+          DevTruyen &copy; 2021. All rights reserved.
         </p>
       </div>
     </div>

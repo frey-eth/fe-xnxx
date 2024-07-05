@@ -45,7 +45,7 @@ const Header = () => {
       <div className="w-full px-5 py-3 rounded-lg shadow-lg bg-white border flex flex-row justify-between items-center text-black gap-2">
         <div className="flex flex-row items-center">
           <Link href={"/"} className="sm:text-3xl text-xl font-liberi">
-            MangaHub
+            DevTruyen
           </Link>
         </div>
         <div className="max-w-[400px] w-full px-4 py-2 border rounded-md flex flex-row items-center max-md:hidden">
