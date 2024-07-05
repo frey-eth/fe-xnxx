@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="w-full px-4 py-2 rounded-lg shadow-lg backdrop-blur border">
         <div className="flex flex-row items-center justify-between">
           <div className="text-2xl font-liberi text-center p-3 italic">
-            MangaHub
+            Devtruyen
           </div>
           <div className="flex flex-row justify-center items-center gap-4">
             <a
