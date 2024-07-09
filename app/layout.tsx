@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "@radix-ui/themes/styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Theme } from "@radix-ui/themes";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,11 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-        <Theme>
-          <Header />
-          <div className="min-h-screen pb-[10px]">{children}</div>
-          <Footer />
-        </Theme>
+        <Header />
+        <div className="min-h-screen pb-[10px]">{children}</div>
+        <Footer />
+        <Toaster />
       </body>
     </html>
   );
