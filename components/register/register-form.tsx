@@ -5,6 +5,8 @@ import * as yup from "yup";
 import { RegisterDataType } from "@/types/user";
 import { authService } from "@/services/auth.service";
 import Link from "next/link";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const signupSchema = yup.object().shape({
   name: yup.string().min(1, "Please enter your name!").required(),
@@ -16,9 +18,11 @@ const signupSchema = yup.object().shape({
 });
 
 const RegisterForm = () => {
+  const router = useRouter();
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors },
   } = useForm<RegisterDataType>({
     resolver: yupResolver(signupSchema),
@@ -32,10 +36,12 @@ const RegisterForm = () => {
     try {
       const res = await authService.register(data);
       if (res.data) {
-        console.log(res.data);
+        toast.success("Register Successfully");
+        reset();
+        router.push("/login");
       }
     } catch (error) {
-      console.log(error);
+      toast.error("Register Failed");
     }
   };
   return (

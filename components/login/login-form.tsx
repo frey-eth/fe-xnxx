@@ -5,6 +5,9 @@ import * as yup from "yup";
 import Link from "next/link";
 import { LoginDataType } from "@/types/user";
 import { authService } from "@/services/auth.service";
+import { LocalStorage } from "@/utils/local_storage";
+import toast from "react-hot-toast";
+import { jwtDecode } from "jwt-decode";
 
 const loginSchema = yup.object().shape({
   email: yup.string().min(1, "Please enter your email").email().required(),
@@ -23,14 +26,19 @@ const LoginForm = () => {
       password: "",
     },
   });
+
   const onSubmit = async (data: LoginDataType) => {
     try {
       const res = await authService.login(data);
       if (res.data) {
-        console.log(res.data);
+        console.log(jwtDecode(res.data.token));
+        LocalStorage().setToken(res.data.token);
+        LocalStorage().setRefreshToken(res.data.refreshToken);
+        toast.success("Login successfully");
+        // window.location.href = "/";
       }
-    } catch (error) {
-      console.log(error);
+    } catch (error: any) {
+      toast.error(error.response.data);
     }
   };
   return (
