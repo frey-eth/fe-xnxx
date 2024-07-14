@@ -1,4 +1,5 @@
 // src/api/axios.js
+import store from "@/lib/store";
 import axios from "axios";
 
 const baseUrl = "http://localhost:5000/api/";
@@ -7,12 +8,12 @@ const axiosClient = axios.create({
   baseURL: baseUrl,
   headers: {
     "Content-Type": "application/json",
+    "Allow-Control-Allow-Origin": "*",
   },
 });
 
 axiosClient.interceptors.request.use(async (config) => {
-  const token = localStorage.getItem("token");
-
+  const token = store.getState().auth.accessToken;
   if (token && !config.headers["Authorization"]) {
     config.headers["Authorization"] = `Bearer ${token}`;
   }

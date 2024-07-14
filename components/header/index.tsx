@@ -9,11 +9,14 @@ import { GrPaypal } from "react-icons/gr";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSelector } from "react-redux";
+import { selectIsAuthenticated } from "@/lib/redux/auth-slice";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const location = usePathname();
+  const isAuthenticated = useSelector(selectIsAuthenticated);
   const [openMenu, setOpenMenu] = useState(false);
   const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;

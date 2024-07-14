@@ -8,4 +8,9 @@ export const authService = {
   register: async (data: RegisterDataType) => {
     return await axiosClient.post("user/register/", data);
   },
+  refreshToken: async (refreshToken: string) => {
+    return await axiosClient.post("user/refresh-token/", {
+      refreshToken: refreshToken,
+    });
+  },
 };

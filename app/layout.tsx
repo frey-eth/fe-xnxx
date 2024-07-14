@@ -7,7 +7,9 @@ import "swiper/css/pagination";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
-import StoreProvider from "./store-provider";
+import StoreProvider from "../providers/store-provider";
+import PersistLoginProvider from "@/providers/persist-login-provider";
+import ProtectedRouterProvider from "@/providers/protected-router-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,14 +26,18 @@ export default function RootLayout({
 }>) {
   return (
     <StoreProvider>
-      <html lang="en">
-        <body className={inter.className} suppressHydrationWarning={true}>
-          <Header />
-          <div className="min-h-screen pb-[10px]">{children}</div>
-          <Footer />
-          <Toaster position="top-right" />
-        </body>
-      </html>
+      <PersistLoginProvider>
+        <ProtectedRouterProvider>
+          <html lang="en">
+            <body className={inter.className} suppressHydrationWarning={true}>
+              <Header />
+              <div className="min-h-screen pb-[10px]">{children}</div>
+              <Footer />
+              <Toaster position="top-right" />
+            </body>
+          </html>
+        </ProtectedRouterProvider>
+      </PersistLoginProvider>
     </StoreProvider>
   );
 }

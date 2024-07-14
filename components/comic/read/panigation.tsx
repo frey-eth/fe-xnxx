@@ -4,7 +4,7 @@ import { IoChevronBackOutline } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { useEffect, useState } from "react";
 import ListChapterPanigation from "./list-panigation-chapter";
-import { useSearchChapter } from "@/hooks/useSearchChapter";
+import { useSearchChapter } from "@/hooks/use-search-chapter";
 
 type PanigationProps = {
   maxChapter: number;

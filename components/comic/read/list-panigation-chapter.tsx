@@ -1,7 +1,7 @@
 "use client";
 import { ListChapter } from "@/constants/list-chapter";
-import useClickOutside from "@/hooks/useClickOutside";
-import { useSearchChapter } from "@/hooks/useSearchChapter";
+import useClickOutside from "@/hooks/use-click-outside";
+import { useSearchChapter } from "@/hooks/use-search-chapter";
 import { usePathname, useRouter } from "next/navigation";
 
 type ChapterPanigationProps = {

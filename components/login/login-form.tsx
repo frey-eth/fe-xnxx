@@ -7,7 +7,8 @@ import { LoginDataType } from "@/types/user";
 import { authService } from "@/services/auth.service";
 import { LocalStorage } from "@/utils/local_storage";
 import toast from "react-hot-toast";
-import { jwtDecode } from "jwt-decode";
+import { useDispatch, useSelector } from "react-redux";
+import { login, selectAccessToken } from "@/lib/redux/auth-slice";
 
 const loginSchema = yup.object().shape({
   email: yup.string().min(1, "Please enter your email").email().required(),
@@ -15,6 +16,7 @@ const loginSchema = yup.object().shape({
 });
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
   const {
     handleSubmit,
     register,
@@ -31,16 +33,22 @@ const LoginForm = () => {
     try {
       const res = await authService.login(data);
       if (res.data) {
-        console.log(jwtDecode(res.data.token));
         LocalStorage().setToken(res.data.token);
         LocalStorage().setRefreshToken(res.data.refreshToken);
         toast.success("Login successfully");
+        dispatch(
+          login({
+            accessToken: res.data.token,
+            refreshToken: res.data.refreshToken,
+          })
+        );
         // window.location.href = "/";
       }
     } catch (error: any) {
       toast.error(error.response.data);
     }
   };
+
   return (
     <form className="flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
       <div className="flex flex-col gap-1 w-full">
