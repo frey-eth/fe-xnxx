@@ -72,6 +72,7 @@ const Header = () => {
           {ListTabs.map((tab) =>
             tab.title === "Login" && isAuthenticated ? (
               <button
+                key={tab.title}
                 className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
                 onClick={handleLogout}
               >
@@ -111,6 +112,7 @@ const Header = () => {
           {ListTabs.map((tab) =>
             tab.title === "Login" && isAuthenticated ? (
               <button
+                key={tab.title}
                 className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
                 onClick={() => {
                   handleLogout();
