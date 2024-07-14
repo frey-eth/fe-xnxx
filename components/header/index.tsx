@@ -9,13 +9,16 @@ import { GrPaypal } from "react-icons/gr";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useSelector } from "react-redux";
-import { selectIsAuthenticated } from "@/lib/redux/auth-slice";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectIsAuthenticated } from "@/lib/redux/auth-slice";
+import toast from "react-hot-toast";
+import SwitchButton from "../common/switch-button";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const location = usePathname();
+  const dispatch = useDispatch();
   const isAuthenticated = useSelector(selectIsAuthenticated);
   const [openMenu, setOpenMenu] = useState(false);
   const handleScroll = () => {
@@ -26,6 +29,11 @@ const Header = () => {
       setIsVisible(true);
     }
     setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); // For Mobile or negative scrolling
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+    toast.success("Logout successfully");
   };
 
   useEffect(() => {
@@ -60,15 +68,25 @@ const Header = () => {
           <FaSearch size={16} />
         </div>
         <div className="flex flex-row items-center gap-4 max-md:hidden">
-          {ListTabs.map((tab) => (
-            <Link
-              href={tab.link}
-              key={tab.title}
-              className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
-            >
-              {tab.title}
-            </Link>
-          ))}
+          <SwitchButton />
+          {ListTabs.map((tab) =>
+            tab.title === "Login" && isAuthenticated ? (
+              <button
+                className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                href={tab.link}
+                key={tab.title}
+                className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
+              >
+                {tab.title}
+              </Link>
+            )
+          )}
         </div>
         <div className="md:hidden">
           <HiOutlineMenuAlt3
@@ -90,16 +108,28 @@ const Header = () => {
             />
             <FaSearch size={14} />
           </div>
-          {ListTabs.map((tab) => (
-            <Link
-              onClick={() => setOpenMenu(false)}
-              href={tab.link}
-              key={tab.title}
-              className="px-3 font-bold uppercase buttonCategory bg-black text-white py-1"
-            >
-              {tab.title}
-            </Link>
-          ))}
+          {ListTabs.map((tab) =>
+            tab.title === "Login" && isAuthenticated ? (
+              <button
+                className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
+                onClick={() => {
+                  handleLogout();
+                  setOpenMenu(false);
+                }}
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                onClick={() => setOpenMenu(false)}
+                href={tab.link}
+                key={tab.title}
+                className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
+              >
+                {tab.title}
+              </Link>
+            )
+          )}
 
           <div className="flex flex-row w-full justify-center gap-4 p-2">
             <a href="https://www.facebook.com/literally.dng" target="_blank">
@@ -114,6 +144,7 @@ const Header = () => {
               <GrPaypal size={40} />
             </a>
           </div>
+          <SwitchButton />
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 import store from "@/lib/store";
 import axios from "axios";
 
-const baseUrl = "http://localhost:5000/api/";
+const baseUrl = "https://devtruyen-api.vercel.app/api/";
 
 const axiosClient = axios.create({
   baseURL: baseUrl,

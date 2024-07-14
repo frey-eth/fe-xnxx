@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Link from "next/link";
+import { userService } from "@/services/user.service";
+import toast from "react-hot-toast";
 
 const signupSchema = yup.object().shape({
   email: yup
@@ -24,9 +26,10 @@ const ResetPasswordForm = () => {
   });
   const onSubmit = async (data: { email: string }) => {
     try {
-      console.log(data);
+      await userService.requestResetPassword(data);
+      toast.success("Please check your email to reset password!");
     } catch (error) {
-      console.log(error);
+      toast.error("Account not found!");
     }
   };
   return (
