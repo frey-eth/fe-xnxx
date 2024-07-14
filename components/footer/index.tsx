@@ -11,7 +11,7 @@ const Footer = () => {
       className={`w-full p-4 ${
         location === "/login" ||
         location === "/register" ||
-        location === "/reset-password"
+        location.includes("reset-password")
           ? "hidden"
           : ""
       }`}
