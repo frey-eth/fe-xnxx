@@ -48,7 +48,7 @@ const Header = () => {
       className={`w-full p-4 fixed z-[10] transition-transform duration-300 ${
         location === "/login" ||
         location === "/register" ||
-        location === "/reset-password"
+        location.includes("reset-password")
           ? "hidden"
           : ""
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
