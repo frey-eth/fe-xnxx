@@ -1,9 +1,7 @@
-"use client";
 import { selectIsAuthenticated } from "@/lib/redux/auth-slice";
 import { usePathname, useRouter } from "next/navigation";
 import { ReactNode, useEffect } from "react";
 import { useSelector } from "react-redux";
-
 const authRoutes = [
   "/login",
   "/register",

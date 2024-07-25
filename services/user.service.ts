@@ -9,4 +9,7 @@ export const userService = {
       password: data.password,
     });
   },
+  getUserProfile: async () => {
+    return await axiosClient.get("/user/profile");
+  },
 };

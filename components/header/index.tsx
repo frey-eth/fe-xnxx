@@ -6,19 +6,18 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { SiDiscord } from "react-icons/si";
 import { GrPaypal } from "react-icons/gr";
+import { FaUserAstronaut } from "react-icons/fa";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
-import { logout, selectIsAuthenticated } from "@/lib/redux/auth-slice";
-import toast from "react-hot-toast";
+import { useSelector } from "react-redux";
+import { selectIsAuthenticated } from "@/lib/redux/auth-slice";
 import SwitchButton from "../common/switch-button";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const location = usePathname();
-  const dispatch = useDispatch();
   const isAuthenticated = useSelector(selectIsAuthenticated);
   const [openMenu, setOpenMenu] = useState(false);
   const handleScroll = () => {
@@ -29,11 +28,6 @@ const Header = () => {
       setIsVisible(true);
     }
     setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); // For Mobile or negative scrolling
-  };
-
-  const handleLogout = () => {
-    dispatch(logout());
-    toast.success("Logout successfully");
   };
 
   useEffect(() => {
@@ -71,13 +65,15 @@ const Header = () => {
           <SwitchButton />
           {ListTabs.map((tab) =>
             tab.title === "Login" && isAuthenticated ? (
-              <button
+              <Link
+                href={"/profile"}
                 key={tab.title}
-                className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
-                onClick={handleLogout}
+                className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1 "
               >
-                Logout
-              </button>
+                <div className="flex flex-row items-center gap-1 ">
+                  <FaUserAstronaut /> Profile
+                </div>
+              </Link>
             ) : (
               <Link
                 href={tab.link}
@@ -111,16 +107,16 @@ const Header = () => {
           </div>
           {ListTabs.map((tab) =>
             tab.title === "Login" && isAuthenticated ? (
-              <button
+              <Link
+                onClick={() => setOpenMenu(false)}
+                href={"/profile"}
                 key={tab.title}
-                className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1"
-                onClick={() => {
-                  handleLogout();
-                  setOpenMenu(false);
-                }}
+                className="px-3 text-sm font-bold uppercase buttonCategory bg-black text-white py-1 "
               >
-                Logout
-              </button>
+                <div className="flex flex-row items-center gap-1 ">
+                  <FaUserAstronaut /> Profile
+                </div>
+              </Link>
             ) : (
               <Link
                 onClick={() => setOpenMenu(false)}

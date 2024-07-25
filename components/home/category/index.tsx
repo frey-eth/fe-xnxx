@@ -3,8 +3,10 @@ import { useState } from "react";
 import CategoryCard from "./category-card";
 import ProcessingBar from "./processing-bar";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { manga_list } from "@/constants/list-manga";
 import { checkDevice } from "@/utils/check-device";
+import { useQuery } from "@tanstack/react-query";
+import { comicService } from "@/services/comic.service";
+import { HOST_IMAGE } from "@/constants/home_image";
 
 const ListCategory = ["Manhwa", "Manhua", "Manga", "Webtoon"];
 
@@ -18,6 +20,17 @@ const Category = () => {
       return ListCategory[nextIndex];
     });
   };
+
+  const { data } = useQuery({
+    queryKey: ["manga"],
+    queryFn: async () => {
+      const res = await comicService.getListComic();
+      console.log(res);
+      if (res) {
+        return res.data.comics as Comic[];
+      }
+    },
+  });
 
   return (
     <div className="flex w-full flex-col gap-2">
@@ -48,11 +61,17 @@ const Category = () => {
           autoplay={{ delay: 4000 }}
           slidesPerGroup={2}
         >
-          {manga_list.map((manga, index) => (
-            <SwiperSlide key={index}>
-              <CategoryCard title={manga.name} image={manga.img} />
-            </SwiperSlide>
-          ))}
+          {data &&
+            data.map((manga, index) => (
+              <SwiperSlide key={index}>
+                <CategoryCard
+                  _id={manga._id}
+                  title={manga.comic_detail.title}
+                  image={HOST_IMAGE + manga.comic_detail.banner}
+                  description={manga.comic_detail.description}
+                />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </div>

@@ -1,0 +1,1 @@
+export const HOST_IMAGE = "https://dtcdnyacd.com";

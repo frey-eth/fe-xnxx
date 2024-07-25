@@ -1,4 +1,3 @@
-"use client";
 import useRefreshToken from "@/hooks/use-refresh-token";
 import { selectIsAuthenticated } from "@/lib/redux/auth-slice";
 import { ReactNode, useEffect } from "react";

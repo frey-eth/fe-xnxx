@@ -1,3 +1,5 @@
+"use server";
+import { headers } from "next/headers";
 import { LuBookOpen } from "react-icons/lu";
 import { FaHeart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
@@ -12,15 +14,23 @@ import { FaRegComments } from "react-icons/fa6";
 
 import ChapterList from "@/components/comic/chapter";
 import CommentList from "@/components/comic/comments";
+import { comicService } from "@/services/comic.service";
+import { HOST_IMAGE } from "@/constants/home_image";
 
-const PageComic = () => {
+const PageComic = async () => {
+  const headersList = headers();
+  // read the custom x-url header
+  const header_url = headersList.get("x-url") || "";
+  const comic = await comicService.getSingleComic(
+    header_url?.split("/").pop() || ""
+  );
   const manga_tabs = ["Action", "Fantasy", "Shounen", "Demon"];
   return (
     <div className="flex flex-col gap-4 w-full">
       <div className="flex flex-row w-full max-md:px-2 px-10 gap-3 relative overflow-hidden pt-28">
         <div className="absolute left-0 z-[-1] w-full h-full bottom-14 max-md:bottom-20 overflow-hidden">
           <img
-            src="/images/banner1.jpg"
+            src={HOST_IMAGE + comic.data.comic_detail.banner}
             className="object-cover h-full w-full blur-[3px]"
           />
         </div>
@@ -28,14 +38,14 @@ const PageComic = () => {
 
         <div className="w-[200px] h-[280px] max-md:w-[160px] max-md:h-[240px] relative rounded-md overflow-hidden">
           <img
-            src="/images/banner1.jpg"
+            src={HOST_IMAGE + comic.data.comic_detail.banner}
             className="object-cover h-full w-full "
           />
         </div>
         <div className="flex flex-col justify-between w-full">
           <div className="flex flex-col gap-2 max-md:gap-1 text-white">
             <h1 className="text-[48px] max-md:text-[32px] max-md:leading-[32px] leading-[48px] font-bold">
-              Jujutsu Kaisen
+              {comic.data.comic_detail.title}
             </h1>
             <div className=" flex flex-row items-center gap-2 font-semibold">
               <LiaCalendarDaySolid size={24} /> <span>2022</span>
@@ -45,12 +55,15 @@ const PageComic = () => {
             </div>
 
             <div className=" flex flex-row items-center gap-2 font-semibold">
-              <AiFillSignal size={24} /> <span>812 Chapters</span>
+              <AiFillSignal size={24} />{" "}
+              <span>{comic.data.num_of_chapters} Chapters</span>
             </div>
           </div>
 
           <div className="flex flex-col gap-5 w-full">
-            <h1 className="text-white font-medium mt-1">Akutami Gege</h1>
+            <h1 className="text-white font-medium mt-1">
+              {comic.data.comic_detail.author}
+            </h1>
             <div className="flex max-md:flex-col gap-1 w-full justify-between">
               <div className="flex flex-row gap-2">
                 <button className="px-10 max-md:px-2 bg-black py-2 border rounded w-fit font-semibold text-white whitespace-nowrap max-md:text-sm">
@@ -72,7 +85,7 @@ const PageComic = () => {
                   <CiBookmark size={24} /> <span>321</span>
                 </div>
                 <div className=" text-black flex flex-row items-center gap-1">
-                  <FaRegEye size={24} /> <span>1.2k</span>
+                  <FaRegEye size={24} /> <span>{comic.data.totalViews}k</span>
                 </div>
               </div>
             </div>
@@ -98,21 +111,14 @@ const PageComic = () => {
             Description
           </h1>
           <p className="text-sm text-gray-500  p-3">
-            Yuuji Itadori là một thiên tài có tốc độ và sức mạnh, nhưng cậu ấy
-            muốn dành thời gian của mình trong Câu lạc bộ Tâm Linh. Một ngày sau
-            cái chết của ông mình, anh gặp Megumi Fushiguro, người đang tìm kiếm
-            vật thể bị nguyền rủa mà các thành viên CLB đã tìm thấy. Đối mặt với
-            những con quái vật khủng khiếp bị Ám, Yuuji nuốt vật thể bị phong ấn
-            để có được sức mạnh của nó và cứu bạn bè của mình! Nhưng giờ Yuuji
-            là người bị Ám, và cậu ấy sẽ bị kéo vào thế giới ma quỷ ly kỳ của
-            Megumi và những con quái vật độc ác.
+            {comic.data.comic_detail.description}
           </p>
         </div>
         <div className=" flex flex-col gap-4 w-full">
           <h1 className="text-lg font-bold flex flex-row gap-2">
             <FaTableList size={24} className="text-gray-500" /> Chapters
           </h1>
-          <ChapterList />
+          <ChapterList num_of_chapters={comic.data.num_of_chapters} />
           <h1 className="text-lg font-bold flex flex-row gap-2">
             <FaRegComments size={24} className="text-gray-500" /> Bình luận
           </h1>
